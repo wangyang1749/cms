@@ -1,18 +1,23 @@
 package com.wangyang.cms.pojo.entity;
 
+import com.wangyang.cms.pojo.entity.base.BaseEntity;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class User {
+public class User extends BaseEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
+    private int status;
+
     private String username;
     private String password;
     private String email;
+
 
     public String getUsername() {
         return username;
@@ -36,5 +41,21 @@ public class User {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int getStatus() {
+        return status;
+    }
+
+    public void setStatus(int status) {
+        this.status = status;
     }
 }

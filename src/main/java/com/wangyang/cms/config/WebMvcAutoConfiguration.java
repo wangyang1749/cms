@@ -7,6 +7,6 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 //@Configuration
 //@EnableWebMvc
 @Deprecated
-public class WebMvcAutoConfiguration implements WebMvcConfigurer {
+public class WebMvcAutoConfiguration {
 
 }
